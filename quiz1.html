@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quick Test</title>
+    <style>
+        #quiz-section {
+            display: none;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="intro-screen">
+        <button id="start-quiz-btn">START QUIZ</button>
+    </div>
+
+    <div id="quiz-section">
+        <h1>Quiz Loaded!</h1>
+    </div>
+
+    <script>
+        document.getElementById('start-quiz-btn').addEventListener('click', function () {
+            console.log("Button clicked!");
+            document.getElementById('intro-screen').style.display = 'none';
+            document.getElementById('quiz-section').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
