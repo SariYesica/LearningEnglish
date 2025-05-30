@@ -21,7 +21,7 @@
             padding: 15px;
             background-color: white;
             border-radius: 8px;
-            border-left: 5px solid #0d6efd;
+            border-left: 5px solid #323232;
         }
 
         .options {
@@ -41,7 +41,7 @@
         }
 
         .option-item:hover {
-            background-color: #d1e7ff;
+            background-color: #8c8f92;
         }
 
         .option-item input[type="radio"] {
@@ -87,7 +87,7 @@
 
         .intro-screen h2 {
             margin-bottom: 20px;
-            color: #0d6efd;
+            color: #666769;
         }
 
         .intro-screen p {
@@ -145,14 +145,14 @@
     </nav>
 
     <div class="container my-5">
-        <div class="quiz-container">
+        <div class="quiz-container bg-dark bg-opacity-25">
             <!-- Intro Screen -->
             <div id="intro-screen" class="intro-screen">
                 <h2>Are You Ready?</h2>
                 <p>This quiz will test your knowledge of English pronouns, including subject pronouns, object pronouns,
                     and possessive forms.</p>
                 <p>There are 10 questions in total. Take your time and think carefully before answering!</p>
-                <button class="btn btn-primary btn-lg" id="start-quiz-btn">Start Quiz</button>
+                <button class="btn btn-dark btn-lg" id="start-quiz-btn">Start Quiz</button>
             </div>
 
             <div id="quiz-section" style="display: none;">
@@ -177,8 +177,10 @@
                     <div class="mt-3 mb-4" style="width: 300px; height: 300px; margin: 0 auto;">
                         <canvas id="score-chart"></canvas>
                     </div>
-                    <button class="btn btn-info" id="review-btn">Review Answers</button>
-                    <button class="btn btn-primary" id="retake-btn">Retake Quiz</button>
+                    <button class="btn btn-info" id="review-btn">Review Jawaban</button>
+                    <button class="btn btn-primary" id="retake-btn">Quiz Kembali</button>
+                    <a href="index.html"> <button type="button" class="btn btn-secondary"> Kembali ke
+                            Materi</button></a>
                 </div>
             </div>
 
