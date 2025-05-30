@@ -13,15 +13,20 @@ function displayResults() {
   const quizResults = JSON.parse(localStorage.getItem('quizResults')) || [];
   const resultsList = document.getElementById('results-list');
   const noResults = document.getElementById('no-results');
+  const clearAllContainer = document.getElementById('clear-all-container');
   
   resultsList.innerHTML = '';
   
   if (quizResults.length === 0) {
     noResults.style.display = 'block';
+    clearAllContainer.style.display = 'none';
     return;
   }
   
   noResults.style.display = 'none';
+  clearAllContainer.style.display = 'block';
+
+
   
   quizResults.forEach((result, index) => {
     const percentage = Math.round((result.score / result.totalQuestions) * 100);
