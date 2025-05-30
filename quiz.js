@@ -246,6 +246,17 @@ function showResults() {
     scoreElement.textContent = score;
     totalQuestionsElement.textContent = quizQuestions.length;
 
+    // simpan ke local storage
+    const quizResult = {
+        date: new Date().toISOString(),
+        score: score,
+        totalQuestions: quizQuestions.length
+    };
+
+    const quizResults = JSON.parse(localStorage.getItem('quizResults')) || [];
+    quizResults.push(quizResult);
+    localStorage.setItem('quizResults', JSON.stringify(quizResults));
+
     // Show score message
     let message = '';
     const percent = (score / quizQuestions.length) * 100;
